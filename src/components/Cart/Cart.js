@@ -11,10 +11,12 @@ const Cart = (props) => {
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
   const hasItems = cartCtx.items.length > 0;
 
+  // Changed this...
   const cartItemRemoveHandler = (id) => {
     cartCtx.removeItem(id);
   };
 
+  // ...and that
   const cartItemAddHandler = (item) => {
     cartCtx.addItem({ ...item, amount: 1 });
   };
